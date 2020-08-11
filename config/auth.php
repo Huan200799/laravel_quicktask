@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+
+        'vp_users' => [
+            'driver' => 'session',
+            'provider' => 'vp_users',
+        ],
+        'vp_users-api' => [
+            'driver' => 'token',
+            'provider' => 'vp_users',
+        ],
     ],
 
     /*
@@ -69,6 +79,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'vp_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
         ],
 
         // 'users' => [
@@ -98,6 +113,11 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+        ],
+        'vp_users' => [
+            'provider' => 'vp_users',
+            'table' => 'password_resets',
+            'expire' => 60,
         ],
     ],
 
