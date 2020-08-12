@@ -31,7 +31,7 @@ class UserController extends Controller
         ];
         if (Auth::attempt($login)) {
 
-            return redirect()->intended('/');
+            return redirect()->intended('CRUD/task');
         }
         if (Auth::attempt($admin)) {
 
@@ -75,7 +75,6 @@ class UserController extends Controller
 
             return view('backend.listaccout',$data);
         }
-
     }
 
     public function getEditAccout($id){
