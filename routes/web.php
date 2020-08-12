@@ -20,16 +20,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.app');
 });
+Route::group(['prefix' => 'CRUD'], function() {
+Route::get('task','CRUDTaskController@getTask');
+Route::post('tasks', 'CRUDTaskController@postTask');
+Route::get('edittask/{id}', 'CRUDTaskController@getEditTask');
+Route::post('edittask/{id}', 'CRUDTaskController@postEditTask');
+Route::GET('deltask/{id}', 'CRUDTaskController@getDelTask');
+});
+
+Route::get('logout', 'UserController@getLogout');
 Route::get('signin', 'UserController@getSignin');
 Route::post('signin', 'UserController@postSignin');
-
 
 Route::group(['prefix' => 'login','middleware'=>'CheckLogedIn'], function() {
     Route::get('/', 'UserController@getLogin');
     Route::post('/', 'UserController@postLogin');
 });
-
-Route::get('logout', 'UserController@getLogout');
 
 Route::group(['prefix' => 'admin','middleware'=>'CheckLogedOut'], function() {
     Route::get('listaccout', 'UserController@getAccout');

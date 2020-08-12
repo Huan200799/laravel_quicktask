@@ -31,7 +31,7 @@ class UserController extends Controller
         ];
         if (Auth::attempt($login)) {
 
-            return redirect()->intended('/');
+            return redirect()->intended('CRUD/task');
         }
         if (Auth::attempt($admin)) {
 
@@ -66,23 +66,22 @@ class UserController extends Controller
     public function getAccout(){
         $count['user'] = User::count('id');
         if($count >= 8){
-            $data['users'] = User::orderby('id','asc')->paginate(8);
+            $data['users'] = User::orderby('id', 'asc')->paginate(8);
 
-            return view('backend.listaccout',$data);
+            return view('backend.listaccout', $data);
         }
         else{
-            $data['users'] = User::orderby('id','asc')->get();
+            $data['users'] = User::orderby('id', 'asc')->get();
 
-            return view('backend.listaccout',$data);
+            return view('backend.listaccout', $data);
         }
-
     }
 
     public function getEditAccout($id){
         if($id != null){
             $data['users'] = User::find($id);
 
-            return view('backend.editaccout',$data);
+            return view('backend.editaccout', $data);
         }
         else
         {

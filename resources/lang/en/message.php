@@ -16,6 +16,13 @@ return [
     'login' => 'Tài khoảng hoặc mật khẩu không đúng.',
     'edit' => 'ID không tồn tại',
     'xoa' => 'ID không tồn tại',
+
+
+
+    'task' => 'Task',
+    'add' => 'Add Task',
+    'sum' => 'Tổng Số Task Của Bạn Là:',
+    'nv' => ' Current Tasks:',
 ];
 
 ?>
