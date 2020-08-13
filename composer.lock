@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6558f74828bca9ebecac73d90cea4b1a",
+    "content-hash": "c214cf271cff0ad98f9e83f55b24e0f8",
     "packages": [
+        {
+            "name": "amrnn/laravel-cursor-paginator",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amrnn90/laravel-cursor-paginator.git",
+                "reference": "5203aa0028655c24b3feef4818f4d8687cdb541f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amrnn90/laravel-cursor-paginator/zipball/5203aa0028655c24b3feef4818f4d8687cdb541f",
+                "reference": "5203aa0028655c24b3feef4818f4d8687cdb541f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.3",
+                "phpunit/phpunit": "^9.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Amrnn\\CursorPaginator\\PaginatorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amrnn\\CursorPaginator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amr Noman",
+                    "email": "amrnn90@gmail.com"
+                }
+            ],
+            "description": "Cursor pagination for Laravel",
+            "keywords": [
+                "cursor",
+                "eloquent",
+                "laravel",
+                "pagination"
+            ],
+            "time": "2020-07-27T13:25:29+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "1.3.0",

@@ -12,9 +12,15 @@ return [
     | the usual Laravel view path has already been registered for you.
     |
     */
+   'pagination' => 'pagination::slider',
+   'pagination' => 'pagination::slider-3',
+
+    // something like
+    'pagination' => 'pagination.my-links',
 
     'paths' => [
         resource_path('views'),
+
     ],
 
     /*
